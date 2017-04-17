@@ -1,1 +1,1 @@
-# SingleStoreDemo1
+# react-native-router-flux combine with react-native-tabs demo
