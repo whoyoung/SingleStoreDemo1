@@ -29,6 +29,9 @@ export default class storeDispatchState extends Component {
             <Text style={styles.instructions} onPress = {()=>Actions.yh_reduxDemo()}>
                 go to reduxDemo
             </Text>
+            <Text style={styles.instructions} onPress = {()=>Actions.yh_tabs()}>
+                go to tab
+            </Text>
         </View>
     );
   }

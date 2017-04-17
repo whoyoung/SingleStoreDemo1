@@ -2,9 +2,9 @@ import React,{Component} from 'react';
 import {
   View,
   Text,
-  TouchableOpacity
 } from 'react-native';
-import {Actions} from 'react-native-router-flux'
+import { Actions } from 'react-native-router-flux';
+
 class Box extends Component{
   constructor(props){//这个也会只调用一次
     super(props);
@@ -29,23 +29,16 @@ class Box extends Component{
 
   componentWillUnmount(){
     //当组件要被从界面上移除的时候，就会调用,可以做一些组件相关的清理工作，例如取消计时器、网络请求等
-    this.props.actions.clearState();
   }
 
   click() {
-    this.props.actions.click();
-  }
-  changeScene(nextScene) {
-    nextScene == 'scene1_1' ? Actions.yh_subScene1_1() : Actions.yh_subScene1_2();
+    Actions.pop();
   }
   render(){
-    let {name} = this.props.state;
-    let nextScene = this.props.title == 'scene1_1' ? 'scene1_2' : 'scene1_1';
     return(
       <View style ={{flex:1,alignItems:'center',justifyContent:'center'}}>
-          <Text style ={{fontSize:18}} onPress ={()=>Actions.pop()}>go back</Text>
-          <Text style ={{fontSize:18,marginTop:10}} onPress ={()=>this.click()}>{name} {this.props.title}</Text>
-          <Text style ={{fontSize:18,marginTop:10}} onPress ={()=>this.changeScene(nextScene)}>go to {nextScene}</Text>
+          <Text style ={{fontSize:18}} onPress ={()=>this.click()}>go back</Text>
+          <Text style ={{fontSize:18}} >i am scene</Text>
       </View>
     )
   }

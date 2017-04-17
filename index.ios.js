@@ -1,6 +1,6 @@
 /**
  * Sample React Native App
- * 
+ * https://github.com/whoyoung/SingleStoreDemo1.git
  */
 
 import {

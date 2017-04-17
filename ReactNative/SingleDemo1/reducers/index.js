@@ -4,7 +4,7 @@ import reduxDemoReducer from '../../ReduxDemo/reducers';
 
 const appReducers = combineReducers({
     initialReducer,
-    reduxDemoReducer
+    reduxDemoReducer,
 });
 
 export default appReducers;
